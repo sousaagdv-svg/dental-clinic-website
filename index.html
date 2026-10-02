@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Open Graph -->
+  <title>Evermiles Dental Clinic — Odontologia Premium e Cuidado Avançado</title>
+  <meta name="description" content="Clínica odontológica premium especializada em tratamentos completos, estética dental, implantes, ortodontia e atendimento humanizado. Agende sua avaliação.">
+  <meta name="theme-color" content="#10201D">
+  
+  <!-- Google Fonts: Newsreader, Plus Jakarta Sans, Caveat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
+  
+  <!-- GSAP Core & ScrollTrigger CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Inline Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='%234E7C70' stroke-width='2'%3E%3Cpath d='M16 3C11 3 8 7 8 12c0 4 1 6 2 9s3 6 4 8c1 2 2 2 2 2s1 0 2-2c1-2 3-5 4-8s2-5 2-9c0-5-3-9-8-9z'/%3E%3C/svg%3E">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. HEADER SOBREPOSTO AO HERO
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="logo" aria-label="Evermiles Dental Clinic">
+        <svg class="logo-icon" viewBox="0 0 32 32">
+          <path d="M16 3C11 3 8 7 8 12c0 4 1 6 2 9s3 6 4 8c1 2 2 2 2 2s1 0 2-2c1-2 3-5 4-8s2-5 2-9c0-5-3-9-8-9z" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-brand">EVERMILES</span>
+          <span class="logo-subtitle">DENTAL CLINIC</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-desktop">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#servicos" class="nav-link">Serviços</a>
+        <a href="#equipe" class="nav-link">Nossa Equipe</a>
+        <a href="#galeria" class="nav-link">Galeria</a>
+        <a href="#contato" class="nav-link">Contato</a>
+      </nav>
+
+      <!-- CTA Right -->
+      <button class="btn-header-cta" data-open-booking>
+        <span>Agendar avaliação</span>
+        <span class="arrow">→</span>
+      </button>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="mobile-menu-btn" id="mobileMenuToggle" aria-label="Abrir Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-menu-drawer" id="mobileMenuDrawer">
+    <div class="mobile-drawer-header">
+      <a href="#home" class="logo">
+        <svg class="logo-icon" viewBox="0 0 32 32">
+          <path d="M16 3C11 3 8 7 8 12c0 4 1 6 2 9s3 6 4 8c1 2 2 2 2 2s1 0 2-2c1-2 3-5 4-8s2-5 2-9c0-5-3-9-8-9z" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-brand">EVERMILES</span>
+          <span class="logo-subtitle">DENTAL CLINIC</span>
+        </div>
+      </a>
+      <button class="modal-close-btn" id="closeMobileMenu" aria-label="Fechar menu">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="#home" class="mobile-nav-link">Home</a>
+      <a href="#sobre" class="mobile-nav-link">Sobre</a>
+      <a href="#servicos" class="mobile-nav-link">Serviços</a>
+      <a href="#equipe" class="mobile-nav-link">Nossa Equipe</a>
+      <a href="#galeria" class="mobile-nav-link">Galeria</a>
+      <a href="#contato" class="mobile-nav-link">Contato</a>
+    </nav>
+    <div class="mobile-drawer-footer">
+      <button class="btn-header-cta" data-open-booking>
+        <span>Agendar avaliação</span>
+        <span class="arrow">→</span>
+      </button>
+    </div>
+  </div>
+
+  <main id="home">
+    <!-- ==========================================================================
+         2. HERO SECTION
+         ========================================================================== -->
+    <section class="hero-section">
+      <div class="hero-bg-wrapper">
+        <img src="public/imagens/hero.png" alt="Recepção moderna e sofisticada da clínica odontológica" class="hero-bg-image">
+      </div>
+      <div class="hero-overlay"></div>
+      
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span>ODONTOLOGIA</span>
+            <span>•</span>
+            <span>CUIDADO</span>
+            <span>•</span>
+            <span>TECNOLOGIA</span>
+          </div>
+
+          <h1 class="hero-title">
+            Seu sorriso merece<br>
+            um cuidado <em>extraordinário.</em>
+          </h1>
+
+          <p class="hero-subtitle">
+            Tratamentos odontológicos completos, tecnologia avançada e um atendimento pensado para cuidar de você com conforto e confiança.
+          </p>
+
+          <div class="hero-cta-group">
+            <button class="btn-primary-hero" data-open-booking>
+              <span>Agendar avaliação</span>
+              <span class="arrow">→</span>
+            </button>
+            <button class="btn-secondary-hero" id="openVideoBtn">
+              <div class="play-icon-circle">▶</div>
+              <span>Conheça nossa clínica</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. FAIXA DE DIFERENCIAIS
+         ========================================================================== -->
+    <div class="diferenciais-section">
+      <div class="container">
+        <div class="diferenciais-card">
+          <div class="diferencial-item">
+            <div class="diferencial-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2C8 2 5 6 5 11c0 4 1 6 2 9s3 6 4 8c1 2 2 2 2 2s1 0 2-2c1-2 3-5 4-8s2-5 2-9c0-5-3-9-8-9z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="diferencial-texts">
+              <span class="diferencial-title">Tecnologia avançada</span>
+              <span class="diferencial-desc">Para tratamentos mais precisos</span>
+            </div>
+          </div>
+
+          <div class="diferencial-item">
+            <div class="diferencial-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="diferencial-texts">
+              <span class="diferencial-title">Equipe experiente</span>
+              <span class="diferencial-desc">Profissionais qualificados</span>
+            </div>
+          </div>
+
+          <div class="diferencial-item">
+            <div class="diferencial-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="diferencial-texts">
+              <span class="diferencial-title">Atendimento personalizado</span>
+              <span class="diferencial-desc">Cuidado pensado para você</span>
+            </div>
+          </div>
+
+          <div class="diferencial-item">
+            <div class="diferencial-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            </div>
+            <div class="diferencial-texts">
+              <span class="diferencial-title">Ambiente confortável</span>
+              <span class="diferencial-desc">Seu bem-estar em primeiro lugar</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         4. SEÇÃO DE SERVIÇOS
+         ========================================================================== -->
+    <section class="services-section" id="servicos">
+      <div class="container">
+        <div class="services-layout">
+          <div class="services-intro">
+            <span class="section-eyebrow">NOSSOS TRATAMENTOS</span>
+            <h2 class="section-title">
+              Tratamentos completos para o <em>seu sorriso</em>
+            </h2>
+            <p class="section-desc">
+              Da prevenção à transformação do sorriso, oferecemos tratamentos personalizados para cuidar da sua saúde e estética bucal com excelência.
+            </p>
+            <button class="btn-services-cta" data-open-booking>
+              <span>Ver todos os tratamentos</span>
+              <span class="arrow">→</span>
+            </button>
+          </div>
+
+          <div class="services-grid">
+            <a href="#" class="service-card" data-open-booking data-service="Odontologia Geral">
+              <div class="service-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&q=80" alt="Odontologia Geral" class="service-img" loading="lazy">
+              </div>
+              <div class="service-footer">
+                <div class="service-footer-left">
+                  <div class="service-icon-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 6 5 11c0 4 1 6 2 9s3 6 4 8c1 2 2 2 2 2s1 0 2-2c1-2 3-5 4-8s2-5 2-9c0-5-3-9-8-9z"/></svg>
+                  </div>
+                  <span class="service-name">Odontologia Geral</span>
+                </div>
+                <span class="service-arrow">→</span>
+              </div>
+            </a>
+
+            <a href="#" class="service-card" data-open-booking data-service="Estética Dental">
+              <div class="service-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Estética Dental" class="service-img" loading="lazy">
+              </div>
+              <div class="service-footer">
+                <div class="service-footer-left">
+                  <div class="service-icon-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+                  </div>
+                  <span class="service-name">Estética Dental</span>
+                </div>
+                <span class="service-arrow">→</span>
+              </div>
+            </a>
+
+            <a href="#" class="service-card" data-open-booking data-service="Implantes Dentários">
+              <div class="service-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=600&q=80" alt="Implantes Dentários" class="service-img" loading="lazy">
+              </div>
+              <div class="service-footer">
+                <div class="service-footer-left">
+                  <div class="service-icon-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                  </div>
+                  <span class="service-name">Implantes Dentários</span>
+                </div>
+                <span class="service-arrow">→</span>
+              </div>
+            </a>
+
+            <a href="#" class="service-card" data-open-booking data-service="Ortodontia">
+              <div class="service-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=600&q=80" alt="Ortodontia" class="service-img" loading="lazy">
+              </div>
+              <div class="service-footer">
+                <div class="service-footer-left">
+                  <div class="service-icon-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                  </div>
+                  <span class="service-name">Ortodontia</span>
+                </div>
+                <span class="service-arrow">→</span>
+              </div>
+            </a>
+
+            <a href="#" class="service-card" data-open-booking data-service="Odontopediatria">
+              <div class="service-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80" alt="Odontopediatria" class="service-img" loading="lazy">
+              </div>
+              <div class="service-footer">
+                <div class="service-footer-left">
+                  <div class="service-icon-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                  </div>
+                  <span class="service-name">Odontopediatria</span>
+                </div>
+                <span class="service-arrow">→</span>
+              </div>
+            </a>
+
+            <a href="#" class="service-card" data-open-booking data-service="Tratamento de Canal">
+              <div class="service-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=600&q=80" alt="Tratamento de Canal" class="service-img" loading="lazy">
+              </div>
+              <div class="service-footer">
+                <div class="service-footer-left">
+                  <div class="service-icon-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                  </div>
+                  <span class="service-name">Tratamento de Canal</span>
+                </div>
+                <span class="service-arrow">→</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. SEÇÃO SOBRE A CLÍNICA
+         ========================================================================== -->
+    <section class="about-section" id="sobre">
+      <div class="container">
+        <div class="about-layout">
+          <div class="about-image-column">
+            <div class="about-image-frame">
+              <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1000&q=85" alt="Profissional de odontologia atendendo paciente na clínica Evermiles" class="about-img" loading="lazy">
+              <div class="about-script-badge">
+                Seu sorriso,<br>nossa missão
+              </div>
+            </div>
+          </div>
+
+          <div class="about-content-column">
+            <span class="section-eyebrow">SOBRE A CLÍNICA</span>
+            <h2 class="about-title">Mais do que um consultório.</h2>
+            <p class="about-text">
+              Acreditamos que um atendimento odontológico de excelência começa pelo cuidado com cada detalhe. Unimos experiência, tecnologia e atenção personalizada para oferecer uma experiência mais tranquila, acolhedora e segura.
+            </p>
+
+            <div class="about-stats-grid">
+              <div class="stat-item">
+                <span class="stat-number">10+</span>
+                <span class="stat-label">Anos de experiência</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">5K+</span>
+                <span class="stat-label">Pacientes atendidos</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">98%</span>
+                <span class="stat-label">Satisfação</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">4.9★</span>
+                <span class="stat-label">Avaliação média</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ==========================================================================
+         6. SEÇÃO NOSSA EQUIPE (Team Section)
+         ========================================================================== -->
+    <section class="team-section" id="equipe">
+      <div class="container">
+        <div class="team-layout">
+
+          <!-- Coluna tipográfica + índice -->
+          <div class="team-intro">
+            <span class="section-eyebrow">NOSSA EQUIPE</span>
+            <h2 class="team-title">
+              Profissionais que cuidam de cada detalhe do <em>seu sorriso.</em>
+            </h2>
+            <p class="team-desc">
+              Uma equipe preparada para oferecer experiência, precisão e um atendimento verdadeiramente personalizado.
+            </p>
+
+            <div class="team-index">
+              <div class="team-index-item">
+                <span class="team-index-num">01</span>
+                <span>
+                  <span class="team-index-name">Dra. Mariana Almeida</span>
+                  <span class="team-index-role">Implantodontista</span>
+                </span>
+              </div>
+              <div class="team-index-item">
+                <span class="team-index-num">02</span>
+                <span>
+                  <span class="team-index-name">Dr. Rafael Martins</span>
+                  <span class="team-index-role">Ortodontista</span>
+                </span>
+              </div>
+              <div class="team-index-item">
+                <span class="team-index-num">03</span>
+                <span>
+                  <span class="team-index-name">Dra. Camila Rocha</span>
+                  <span class="team-index-role">Clínica Geral</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Composição fotográfica assimétrica -->
+          <div class="team-composition">
+
+            <!-- Destaque -->
+            <figure class="team-figure member-primary">
+              <div class="team-figure-media">
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1000&q=85" alt="Dra. Mariana Almeida, implantodontista" loading="lazy">
+              </div>
+              <figcaption>
+                <span class="team-name">Dra. Mariana Almeida</span>
+                <span class="team-role">Implantodontista</span>
+                <p class="team-bio">
+                  Especialista em reabilitação oral e tratamentos personalizados, do planejamento digital ao resultado final.
+                </p>
+              </figcaption>
+            </figure>
+
+            <!-- Secundária A -->
+            <figure class="team-figure member-secondary-a">
+              <div class="team-figure-media">
+                <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=900&q=85" alt="Dr. Rafael Martins, ortodontista" loading="lazy">
+              </div>
+              <figcaption>
+                <span class="team-name">Dr. Rafael Martins</span>
+                <span class="team-role">Ortodontista</span>
+                <p class="team-bio">
+                  Atuação focada em tratamentos ortodônticos modernos e personalizados.
+                </p>
+              </figcaption>
+            </figure>
+
+            <!-- Secundária B -->
+            <figure class="team-figure member-secondary-b">
+              <div class="team-figure-media">
+                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=85" alt="Dra. Camila Rocha, clínica geral" loading="lazy">
+              </div>
+              <figcaption>
+                <span class="team-name">Dra. Camila Rocha</span>
+                <span class="team-role">Clínica Geral</span>
+                <p class="team-bio">
+                  Cuidado preventivo e atendimento integral para todas as fases da vida.
+                </p>
+              </figcaption>
+            </figure>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. SEÇÃO GALERIA (Editorial Gallery)
+         ========================================================================== -->
+    <section class="gallery-section" id="galeria">
+      <div class="container">
+
+        <div class="gallery-intro">
+          <div class="gallery-intro-text">
+            <span class="section-eyebrow">NOSSO ESPAÇO</span>
+            <h2 class="gallery-title">
+              Um ambiente pensado para <em>cuidar de você.</em>
+            </h2>
+            <p class="team-desc">
+              Conheça nossa clínica, nossa estrutura e os detalhes que tornam cada visita mais confortável.
+            </p>
+          </div>
+          <span class="gallery-note">Recepção · Consultórios · Equipamentos</span>
+        </div>
+
+        <!-- Mosaico editorial -->
+        <div class="gallery-mosaic">
+
+          <button type="button" class="gallery-item g-item--hero" data-gallery-item
+                  data-full="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=2000&q=90"
+                  data-caption="Recepção principal">
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1100&q=85" alt="Recepção principal da Evermiles Dental Clinic" loading="lazy">
+            <span class="gallery-caption"><span>Recepção principal</span><span class="gallery-caption-icon" aria-hidden="true">+</span></span>
+          </button>
+
+          <button type="button" class="gallery-item g-item--tall" data-gallery-item
+                  data-full="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1400&q=90"
+                  data-caption="Sala de atendimento">
+            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=85" alt="Sala de atendimento odontológico" loading="lazy">
+            <span class="gallery-caption"><span>Sala de atendimento</span><span class="gallery-caption-icon" aria-hidden="true">+</span></span>
+          </button>
+
+          <button type="button" class="gallery-item g-item--medium" data-gallery-item
+                  data-full="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1400&q=90"
+                  data-caption="Momentos de cuidado">
+            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=85" alt="Profissional realizando atendimento odontológico" loading="lazy">
+            <span class="gallery-caption"><span>Momentos de cuidado</span><span class="gallery-caption-icon" aria-hidden="true">+</span></span>
+          </button>
+
+          <button type="button" class="gallery-item g-item--wide" data-gallery-item
+                  data-full="https://images.unsplash.com/photo-1504813184591-01572f98c85f?auto=format&fit=crop&w=1600&q=90"
+                  data-caption="Arquitetura da clínica">
+            <img src="https://images.unsplash.com/photo-1504813184591-01572f98c85f?auto=format&fit=crop&w=1000&q=85" alt="Detalhe arquitetônico da clínica" loading="lazy">
+            <span class="gallery-caption"><span>Arquitetura da clínica</span><span class="gallery-caption-icon" aria-hidden="true">+</span></span>
+          </button>
+
+          <button type="button" class="gallery-item g-item--square" data-gallery-item
+                  data-full="https://images.unsplash.com/photo-1588776813677-77aaf5595b83?auto=format&fit=crop&w=1400&q=90"
+                  data-caption="Instrumentos e precisão">
+            <img src="https://images.unsplash.com/photo-1588776813677-77aaf5595b83?auto=format&fit=crop&w=800&q=85" alt="Instrumentos odontológicos de precisão" loading="lazy">
+            <span class="gallery-caption"><span>Instrumentos e precisão</span><span class="gallery-caption-icon" aria-hidden="true">+</span></span>
+          </button>
+
+          <button type="button" class="gallery-item g-item--panorama" data-gallery-item
+                  data-full="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1800&q=90"
+                  data-caption="Estrutura e tecnologia">
+            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1100&q=85" alt="Estrutura e tecnologia da clínica" loading="lazy">
+            <span class="gallery-caption"><span>Estrutura e tecnologia</span><span class="gallery-caption-icon" aria-hidden="true">+</span></span>
+          </button>
+
+          <button type="button" class="gallery-item g-item--band" data-gallery-item
+                  data-full="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2200&q=90"
+                  data-caption="Detalhes de acabamento">
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=85" alt="Detalhes de acabamento do ambiente" loading="lazy">
+            <span class="gallery-caption"><span>Detalhes de acabamento</span><span class="gallery-caption-icon" aria-hidden="true">+</span></span>
+          </button>
+
+        </div>
+      </div>
+    </section>    <!-- ==========================================================================
+         8. DEPOIMENTOS
+         ========================================================================== -->
+    <section class="testimonials-section">
+      <div class="container">
+        
+        <div class="testimonials-header">
+          <div class="testimonials-header-left">
+            <span class="section-eyebrow">O QUE NOSSOS PACIENTES DIZEM</span>
+            <h2 class="testimonials-title">
+              Pessoas reais.<br>
+              <em>Sorrisos reais.</em>
+            </h2>
+            <p class="testimonials-desc">
+              Estamos orgulhosos de fazer parte de tantos sorrisos saudáveis e confiantes. Veja o que nossos pacientes têm a dizer sobre a experiência.
+            </p>
+          </div>
+        </div>
+
+        <div class="testimonials-marquee-container">
+          <div class="testimonials-track" id="testimonialsTrack">
+            <!-- 5 unique testimonial cards duplicated for seamless loop -->
+            <div class="testimonial-card">
+              <div>
+                <div class="testimonial-avatar-wrapper"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="Sarah M." class="testimonial-avatar"></div>
+                <p class="testimonial-quote">"Fui muito bem recebida desde o primeiro atendimento. Toda a equipe foi atenciosa e profissional."</p>
+              </div>
+              <div class="testimonial-author-row"><span class="testimonial-author-name">Sarah M.</span><span class="testimonial-stars">★★★★★</span></div>
+            </div>
+            <div class="testimonial-card">
+              <div>
+                <div class="testimonial-avatar-wrapper"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Ahmed R." class="testimonial-avatar"></div>
+                <p class="testimonial-quote">"Excelente atendimento e uma estrutura impecável. Me senti seguro durante todo o tratamento."</p>
+              </div>
+              <div class="testimonial-author-row"><span class="testimonial-author-name">Ahmed R.</span><span class="testimonial-stars">★★★★★</span></div>
+            </div>
+            <div class="testimonial-card">
+              <div>
+                <div class="testimonial-avatar-wrapper"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Ayesha K." class="testimonial-avatar"></div>
+                <p class="testimonial-quote">"Profissionais cuidadosos, ambiente confortável e um resultado que superou minhas expectativas."</p>
+              </div>
+              <div class="testimonial-author-row"><span class="testimonial-author-name">Ayesha K.</span><span class="testimonial-stars">★★★★★</span></div>
+            </div>
+            <div class="testimonial-card">
+              <div>
+                <div class="testimonial-avatar-wrapper"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Carlos Eduardo" class="testimonial-avatar"></div>
+                <p class="testimonial-quote">"O implante dentário foi totalmente indolor e o pós-operatório foi tranquilo. Atendimento de excelência."</p>
+              </div>
+              <div class="testimonial-author-row"><span class="testimonial-author-name">Carlos Eduardo</span><span class="testimonial-stars">★★★★★</span></div>
+            </div>
+            <div class="testimonial-card">
+              <div>
+                <div class="testimonial-avatar-wrapper"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Beatriz Mendes" class="testimonial-avatar"></div>
+                <p class="testimonial-quote">"Fiz meu tratamento ortodôntico invisível aqui e o resultado foi perfeito. Clínica sofisticada e equipe competente."</p>
+              </div>
+              <div class="testimonial-author-row"><span class="testimonial-author-name">Beatriz Mendes</span><span class="testimonial-stars">★★★★★</span></div>
+            </div>
+
+            <!-- Duplicate set for seamless loop -->
+            <div class="testimonial-card">
+              <div>
+                <div class="testimonial-avatar-wrapper"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="Sarah M." class="testimonial-avatar"></div>
+                <p class="testimonial-quote">"Fui muito bem recebida desde o primeiro atendimento. Toda a equipe foi atenciosa e profissional."</p>
+              </div>
+              <div class="testimonial-author-row"><span class="testimonial-author-name">Sarah M.</span><span class="testimonial-stars">★★★★★</span></div>
+            </div>
+            <div class="testimonial-card">
+              <div>
+                <div class="testimonial-avatar-wrapper"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Ahmed R." class="testimonial-avatar"></div>
+                <p class="testimonial-quote">"Excelente atendimento e uma estrutura impecável. Me senti seguro durante todo o tratamento."</p>
+              </div>
+              <div class="testimonial-author-row"><span class="testimonial-author-name">Ahmed R.</span><span class="testimonial-stars">★★★★★</span></div>
+            </div>
+            <div class="testimonial-card">
+              <div>
+                <div class="testimonial-avatar-wrapper"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Ayesha K." class="testimonial-avatar"></div>
+                <p class="testimonial-quote">"Profissionais cuidadosos, ambiente confortável e um resultado que superou minhas expectativas."</p>
+              </div>
+              <div class="testimonial-author-row"><span class="testimonial-author-name">Ayesha K.</span><span class="testimonial-stars">★★★★★</span></div>
+            </div>
+            <div class="testimonial-card">
+              <div>
+                <div class="testimonial-avatar-wrapper"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Carlos Eduardo" class="testimonial-avatar"></div>
+                <p class="testimonial-quote">"O implante dentário foi totalmente indolor e o pós-operatório foi tranquilo. Atendimento de excelência."</p>
+              </div>
+              <div class="testimonial-author-row"><span class="testimonial-author-name">Carlos Eduardo</span><span class="testimonial-stars">★★★★★</span></div>
+            </div>
+            <div class="testimonial-card">
+              <div>
+                <div class="testimonial-avatar-wrapper"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Beatriz Mendes" class="testimonial-avatar"></div>
+                <p class="testimonial-quote">"Fiz meu tratamento ortodôntico invisível aqui e o resultado foi perfeito. Clínica sofisticada e equipe competente."</p>
+              </div>
+              <div class="testimonial-author-row"><span class="testimonial-author-name">Beatriz Mendes</span><span class="testimonial-stars">★★★★★</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         9. CTA FINAL (Banner Escuro)
+         ========================================================================== -->
+    <section class="final-cta-section" id="contato">
+      <div class="container">
+        <div class="final-cta-banner">
+          <div class="cta-left">
+            <span class="cta-eyebrow">SEU PRÓXIMO SORRISO</span>
+            <h2 class="cta-title">
+              Seu melhor sorriso começa com um <em>primeiro passo.</em>
+            </h2>
+          </div>
+
+          <div class="cta-center">
+            <p>Agende sua avaliação e descubra um cuidado odontológico pensado exclusivamente para você e sua família.</p>
+          </div>
+
+          <div class="cta-right">
+            <button class="btn-cta-final" data-open-booking>
+              <span>Agendar avaliação</span>
+              <span class="arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       10. FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <a href="#" class="footer-logo">
+          <svg class="footer-logo-icon" viewBox="0 0 32 32">
+            <path d="M16 3C11 3 8 7 8 12c0 4 1 6 2 9s3 6 4 8c1 2 2 2 2 2s1 0 2-2c1-2 3-5 4-8s2-5 2-9c0-5-3-9-8-9z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div>
+            <div class="footer-logo-brand">EVERMILES</div>
+            <div class="footer-logo-sub">DENTAL CLINIC</div>
+          </div>
+        </a>
+
+        <nav class="footer-nav">
+          <a href="#home" class="footer-link">Home</a>
+          <a href="#sobre" class="footer-link">Sobre</a>
+          <a href="#servicos" class="footer-link">Serviços</a>
+          <a href="#equipe" class="footer-link">Nossa Equipe</a>
+          <a href="#galeria" class="footer-link">Galeria</a>
+          <a href="#contato" class="footer-link">Contato</a>
+        </nav>
+
+        <div class="footer-socials">
+          <a href="#" class="social-icon-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="#" class="social-icon-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+          <a href="#" class="social-icon-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <a href="#" class="social-icon-link" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"></path><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor"></polygon></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Evermiles Dental Clinic. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAIS (Agendamento, Vídeo, Lightbox da Galeria)
+       ========================================================================== -->
+  <div class="modal-backdrop" id="bookingModal">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="closeBookingBtn" aria-label="Fechar">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <h3 class="modal-title">Agendar Avaliação</h3>
+      <p class="modal-subtitle">Preencha seus dados para conversarmos sobre o seu atendimento.</p>
+      
+      <form class="booking-form" id="bookingForm">
+        <div class="form-group">
+          <label for="clientName">Nome Completo</label>
+          <input type="text" id="clientName" required placeholder="Seu nome completo">
+        </div>
+
+        <div class="form-group">
+          <label for="clientPhone">WhatsApp / Telefone</label>
+          <input type="tel" id="clientPhone" required placeholder="(11) 99999-9999">
+        </div>
+
+        <div class="form-group">
+          <label for="serviceSelect">Tratamento de Interesse</label>
+          <select id="serviceSelect">
+            <option value="Avaliação Geral">Avaliação Geral</option>
+            <option value="Odontologia Geral">Odontologia Geral</option>
+            <option value="Estética Dental">Estética Dental</option>
+            <option value="Implantes Dentários">Implantes Dentários</option>
+            <option value="Ortodontia">Ortodontia</option>
+            <option value="Odontopediatria">Odontopediatria</option>
+            <option value="Tratamento de Canal">Tratamento de Canal</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="clientDate">Melhor Data</label>
+          <input type="date" id="clientDate" required>
+        </div>
+
+        <button type="submit" class="btn-submit-booking">Confirmar Agendamento</button>
+      </form>
+
+      <div class="booking-success-msg" id="bookingSuccessMsg">
+        <strong>Agendamento solicitado com sucesso!</strong><br>
+        Nossa equipe entrará em contato via WhatsApp em instantes para confirmar o horário.
+      </div>
+    </div>
+  </div>
+
+  <div class="video-modal-backdrop" id="videoModal">
+    <div class="video-modal-content">
+      <button class="video-close-btn" id="closeVideoBtn" aria-label="Fechar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <iframe id="videoFrame" src="" title="Tour da Evermiles Dental Clinic" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal for Gallery -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Visualização ampliada">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Fechar">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    <div class="lightbox-inner">
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Imagem anterior">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <img src="" alt="" class="lightbox-img" id="lightboxImg">
+      <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Próxima imagem">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+    <span class="lightbox-counter" id="lightboxCounter"></span>
+  </div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
